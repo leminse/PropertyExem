@@ -10,6 +10,8 @@ namespace PropertyExem
     {
         static void Main(string[] args)
         {
+            Box box = new Box(100, 200);
+            Console.WriteLine(box.Area());
         }
     }
 }
