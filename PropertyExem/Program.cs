@@ -10,8 +10,13 @@ namespace PropertyExem
     {
         static void Main(string[] args)
         {
-            Box box = new Box(100, 200);
-            Console.WriteLine(box.Area());
+            Box box1  = new Box(100, 200);
+
+            box1.Width = -3;
+
+            Console.WriteLine(box1.Width);
+
+            Console.WriteLine(box1.Area);
         }
     }
 }
