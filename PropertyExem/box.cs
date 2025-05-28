@@ -11,23 +11,35 @@ namespace PropertyExem
         private int width;
         private int height;
 
-        public Box(int width, int height)
+        public int Width
         {
-            if (width > 0 || height > 0)
+            get { return width; }
+            set
             {
-                this.width = width;
-                this.height = height;
-            }
-            else
-            {
-                Console.WriteLine("너비와 높이는 자연수로 초기화해주세요");
-                //throw new Exception(너비와 높이는 자연수로 초기화해주세요");
+                if (value > 0) { width = value; }
+                else { Console.WriteLine("너비는 자연수로 입력해주세요."); }
             }
         }
 
-        public int Area()
+        public int Height
         {
-            return this.width = this.height;
+            get { return height; }
+            set
+            {
+                if (value > 0) { height = value; }
+                else { Console.WriteLine("높이는 자연수로 입력해주세요."); }
+            }
+        }
+
+        public Box(int width, int height)
+        {
+            Width = width;
+            Height = height;
+        }
+
+        public int Area
+        {
+            get { return Width * Height; }
         }
     }
 }
