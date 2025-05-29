@@ -21,8 +21,15 @@ namespace PropertyExem
             //Program p = new Program();
             //p.classVar = -3;
 
-            Box box1  = new Box(100, 200);
+            //생성자
+            //기본 (기정) 생성자 - 생성자를 하나라도 정의하면 기본 생성자를 따로 작성해줘야 함.
+            //Product p = new Product();
 
+            //팩토리 메서드 패턴 (생성자에 private를 사용하는 경우)
+            Product p = Product.Getinstance("미림", 1500);
+
+            //Property 실습
+            Box box1  = new Box(100, 200);
             box1.Width = -3;
 
             Console.WriteLine(box1.Width);
