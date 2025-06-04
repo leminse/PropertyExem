@@ -8,5 +8,12 @@ namespace PropertyExem
 {
     class Sample
     {
+
+        public static int value;
+        static Sample()                     //정적 생성자 정의 
+        {
+            value = 10;
+            Console.WriteLine("정적 생성자 호출");
+        }
     }
 }
